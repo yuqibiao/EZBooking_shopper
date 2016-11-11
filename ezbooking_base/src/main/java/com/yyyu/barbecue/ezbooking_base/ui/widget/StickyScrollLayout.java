@@ -53,7 +53,7 @@ public class StickyScrollLayout extends LinearLayout implements NestedScrollingP
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        MyLog.d(TAG , "onFinishInflate==============");
+        //MyLog.d(TAG , "onFinishInflate==============");
         mHeader = findViewById(R.id.id_sticky_scroll_header);
         mIndicator = findViewById(R.id.id_sticky_scroll_indicator);
         View view = findViewById(R.id.id_sticky_scroll_viewpager);
@@ -133,19 +133,19 @@ public class StickyScrollLayout extends LinearLayout implements NestedScrollingP
 
     @Override
     public boolean onNestedFling(View target, float velocityX, float velocityY, boolean consumed) {
-        MyLog.e(TAG , "onNestedFling==========");
+        //MyLog.e(TAG , "onNestedFling==========");
         return false;
     }
 
     @Override
     public void onNestedScrollAccepted(View child, View target, int nestedScrollAxes) {
-        MyLog.e(TAG , "onNestedScrollAccepted==========");
+        //MyLog.e(TAG , "onNestedScrollAccepted==========");
         nestedScrollingParentHelper.onNestedScrollAccepted(child , target , nestedScrollAxes);
     }
 
     @Override
     public void onStopNestedScroll(View target) {
-        MyLog.e(TAG , "onStopNestedScroll==========");
+        //MyLog.e(TAG , "onStopNestedScroll==========");
         nestedScrollingParentHelper.onStopNestedScroll(target);
     }
 

@@ -9,6 +9,10 @@ import com.yyyu.barbecue.ezbooking_base.ui.activity.BaseActivity;
 import com.yyyu.ezbooking_shopper.R;
 import com.yyyu.ezbooking_shopper.utils.LogicUtils;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 /**
  * 功能：启动界面(在里面可以做一些应用初始化操作)
  * <p/>
@@ -30,6 +34,12 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected boolean isSwipeBack() {
         return false;
+    }
+
+    @Override
+    protected void beforeInit() {
+        super.beforeInit();
+        EventBus.getDefault().register(this);
     }
 
     @Override
@@ -80,4 +90,16 @@ public class SplashActivity extends BaseActivity {
         });
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onLoginSuccess(String str){
+        if("login_success".equals(str)){
+            this.finish();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+       EventBus.getDefault().unregister(this);
+    }
 }

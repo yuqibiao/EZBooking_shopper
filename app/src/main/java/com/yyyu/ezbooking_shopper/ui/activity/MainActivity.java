@@ -12,7 +12,7 @@ import com.yyyu.barbecue.ezbooking_base.annotate.OnClick;
 import com.yyyu.barbecue.ezbooking_base.annotate.ViewInject;
 import com.yyyu.barbecue.ezbooking_base.ui.activity.BaseActivity;
 import com.yyyu.barbecue.ezbooking_base.ui.widget.ChangeColorView;
-import com.yyyu.barbecue.ezbooking_base.utils.MySnackBar;
+import com.yyyu.barbecue.ezbooking_base.utils.MyToast;
 import com.yyyu.ezbooking_shopper.R;
 import com.yyyu.ezbooking_shopper.bean.foo.LogoutEvent;
 import com.yyyu.ezbooking_shopper.ui.fragment.MyFragment;
@@ -30,8 +30,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
 
 
-
-    @ViewInject(value = R.id.vp_main )
+    @ViewInject(value = R.id.vp_main)
     private ViewPager vp_main;
 
     @ViewInject(value = R.id.ccv_service)
@@ -104,7 +103,7 @@ public class MainActivity extends BaseActivity {
         vp_main.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (positionOffset>0){
+                if (positionOffset > 0) {
                     ChangeColorView left = tabIndicators.get(position);
                     ChangeColorView right = tabIndicators.get(position + 1);
                     left.setIconAlpha(1 - positionOffset);
@@ -132,11 +131,12 @@ public class MainActivity extends BaseActivity {
 
     /**
      * EventBus 来自下单完成的Event
+     *
      * @param msg
      */
-    @Subscribe(threadMode=ThreadMode.MAIN)
-    public void checkedOrderFragment(String msg){
-        if ("order_confirm".equals(msg)){
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void checkedOrderFragment(String msg) {
+        if ("order_confirm".equals(msg)) {
             resetOtherTabs();
             tabIndicators.get(2).setIconAlpha(1.0f);
             vp_main.setCurrentItem(2, false);
@@ -145,11 +145,12 @@ public class MainActivity extends BaseActivity {
 
     /**
      * Eventbus 接收用户注销的事件
+     *
      * @param event
      */
-    @Subscribe(threadMode=ThreadMode.MAIN)
-    public void userLogoutEvent(LogoutEvent event){
-       // initTab();
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void userLogoutEvent(LogoutEvent event) {
+        // initTab();
         //MySnackBar.showShortDef(this , event.msg);
     }
 
@@ -162,7 +163,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.ccv_service , R.id.ccv_seller , R.id.ccv_order , R.id.ccv_my})
+    @OnClick({R.id.ccv_service, R.id.ccv_seller, R.id.ccv_order, R.id.ccv_my})
     public void onInjectClick(View view) {
         switch (view.getId()) {
             case R.id.ccv_service:
@@ -188,13 +189,25 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    long currentTime ;
+    @Override
+    public void onBackPressed() {
+
+        if (System.currentTimeMillis() - currentTime > 2 * 1000) {
+            MyToast.showShort(this, "再按一次退出愉悦订约");
+        } else {
+            super.onBackPressed();
+        }
+        currentTime = System.currentTimeMillis();
+    }
+
     /**
      * 跳转到MainActivity
      *
      * @param activity
      */
-    public static void startAction(Activity activity){
-        Intent intent = new Intent(activity , MainActivity.class);
+    public static void startAction(Activity activity) {
+        Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
     }
 

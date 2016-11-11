@@ -30,7 +30,7 @@ public class SellerFragment extends BaseFragment {
     private TabLayout tb_seller;
     @ViewInject(value = R.id.id_sticky_scroll_viewpager)
     private ViewPager vp_seller;
-    @ViewInject(value = R.id.id_sticky_scroll_header)
+    @ViewInject(value = R.id.ccv_seller_type)
     private ColorAbleGroupView ccv_seller_type;
 
     private List<TabBean> tabs;

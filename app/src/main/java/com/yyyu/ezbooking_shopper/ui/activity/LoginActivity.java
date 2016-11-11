@@ -6,6 +6,8 @@ import android.content.Intent;
 import com.yyyu.barbecue.ezbooking_base.callback.OnDataSubmitListener;
 import com.yyyu.barbecue.ezbooking_base.ui.activity.BaseRegAndLoginActivity;
 
+import org.greenrobot.eventbus.EventBus;
+
 /**
  * 功能：
  *
@@ -31,6 +33,7 @@ public class LoginActivity extends BaseRegAndLoginActivity{
             public void onSuccess(String response) {
                 MainActivity.startAction(LoginActivity.this);
                 LoginActivity.this.finish();
+                EventBus.getDefault().post("login_success");
             }
 
             @Override
