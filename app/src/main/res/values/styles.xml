@@ -1,0 +1,65 @@
+<resources>
+
+    <!--**************************  样式  ***********************-->
+    <!--主页底部menu的样式-->
+    <style name="main_btm_menu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/main_btm_padding</item>
+        <item name="change_text_size">@dimen/main_btm_ts</item>
+        <item name="android:clickable">true</item>
+        <item name="change_color">@color/colorAccent</item>
+        <item name="change_text_color">@color/main_color_dark</item>
+    </style>
+    <!--gray line-->
+    <style name="gray_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/main_color_dark</item>
+    </style>
+    <!--seller type-->
+    <style name="seller_type_rl">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="seller_type_civ">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="select_color">@color/colorAccent</item>
+    </style>
+    <style name="seller_type_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--datetime picker -->
+    <style name="datetime_picker">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/my_white</item>
+        <item name="itemNumber">3</item>
+        <item name="lineColor">@color/colorAccent</item>
+        <item name="maskHight">50dp</item>
+        <item name="noEmpty">true</item>
+        <item name="normalTextColor">@color/my_gray</item>
+        <item name="normalTextSize">11sp</item>
+        <item name="selecredTextColor">@color/colorAccent</item>
+        <item name="selecredTextSize">13dp</item>
+        <item name="unitHight">50dp</item>
+    </style>
+
+    <style name="address_picker" parent="datetime_picker">
+        <item name="maskHight">60dp</item>
+        <item name="unitHight">50dp</item>
+        <item name="normalTextSize">13sp</item>
+    </style>
+
+</resources>

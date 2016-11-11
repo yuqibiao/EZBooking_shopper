@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义的ChangeColorView的自定义属性-->
+    <declare-styleable name="ChangeColorView">
+        <attr name="change_icon" format="reference" />
+        <attr name="change_color" format="color" />
+        <attr name="change_text" format="string" />
+        <attr name="change_text_color" format="color" />
+        <attr name="change_text_size" format="dimension" />
+    </declare-styleable>
+
+    <!--自定义滑动选择控件的属性-->
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+
+    <!--圆角 ImageView属性-->
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <!--ViewPagerLooper-->
+    <declare-styleable name="ViewPageLooper">
+        <attr name="dot_normal_color" format="color"></attr>
+        <attr name="dot_selected_color" format="color"></attr>
+    </declare-styleable>
+
+    <!--自定义SwipeBackLayout属性-->
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+    <!--MyGradientTextView属性-->
+    <declare-styleable name="MyGradientTextView">
+        <attr name="start_color" format="color"/>
+        <attr name="center_color" format="color"/>
+        <attr name="end_color" format="color"/>
+    </declare-styleable>
+
+    <!--ColorAbleImageView属性-->
+    <declare-styleable name="ColorAbleImageView">
+        <attr name="select_color" format="color"/>
+    </declare-styleable>
+
+
+</resources>

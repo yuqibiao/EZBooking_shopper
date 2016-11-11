@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yyyu.barbecue.ezbooking_base.ui.widget.RefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_seller_show"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_sellers_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.yyyu.barbecue.ezbooking_base.ui.widget.RefreshLayout>

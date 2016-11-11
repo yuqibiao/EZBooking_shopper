@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--angle为0表示从左向右-->
+    <gradient android:startColor="#c34803" android:endColor="#fcdcbe"
+        android:angle="0" android:gradientRadius="1dp"/>
+</shape>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_adver"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#77000000"/>
+
+        <ImageButton
+            android:id="@+id/ib_scan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:background="@color/trans"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_scan" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="16dp"
+            android:text="为您提供生活预约服务" />
+
+        <TextView
+            android:id="@+id/tv_adver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_tips"
+            android:layout_marginBottom="25dp"
+            android:paddingLeft="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/my_white" />
+
+        <com.yyyu.barbecue.ezbooking_base.ui.widget.ViewpagerLooper
+            android:id="@+id/vpl_adver"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_above="@+id/tv_tips"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            app:dot_normal_color = "@color/my_white"
+            app:dot_selected_color = "@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:scrollbars="none"
+        android:fillViewport="false">
+        <LinearLayout
+            android:id="@+id/ll_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="false"
+            android:button="@drawable/checkbox_bg"
+            android:text="  预约"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_time_choice"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center"
+            android:background="@drawable/trans_et_bg"
+            android:hint="选择预约时间" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="您的预定将保留15分钟，如果又需要延长请与商家联系"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:text="商家的服务选项"/>
+
+    <com.yyyu.ezbooking_shopper.ui.wdiget.MyRecyclerView
+        android:id="@+id/rv_service_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="20dp"
+        android:scrollbars="none"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:text="以上服务为商家除了主服务外，提供的附加服务"/>
+
+</LinearLayout>
+
+</ScrollView>

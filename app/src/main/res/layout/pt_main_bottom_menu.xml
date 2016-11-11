@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main_btm"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_btm_height"
+    android:background="@color/my_white"
+    android:orientation="horizontal">
+
+    <com.yyyu.barbecue.ezbooking_base.ui.widget.ChangeColorView
+        android:id="@+id/ccv_service"
+        style="@style/main_btm_menu"
+        app:change_icon="@mipmap/menu_service"
+        app:change_text="服务" />
+
+    <com.yyyu.barbecue.ezbooking_base.ui.widget.ChangeColorView
+        android:id="@+id/ccv_seller"
+        style="@style/main_btm_menu"
+        app:change_icon="@mipmap/menu_seller"
+        app:change_text="商家" />
+
+    <com.yyyu.barbecue.ezbooking_base.ui.widget.ChangeColorView
+        android:id="@+id/ccv_order"
+        style="@style/main_btm_menu"
+        app:change_icon="@mipmap/menu_order"
+        app:change_text="订单" />
+
+    <com.yyyu.barbecue.ezbooking_base.ui.widget.ChangeColorView
+        android:id="@+id/ccv_my"
+        style="@style/main_btm_menu"
+        app:change_icon="@mipmap/menu_my"
+        app:change_text="我的" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--搜索-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/lb_search"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="2dp"
+            android:background="@color/my_white"
+            android:layout_marginLeft="18dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_search" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:text="商家"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_seller_search"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:focusable="false"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gray_et_bg"
+                android:hint="请输入商家名称"
+                android:paddingLeft="10dp"
+                android:textColor="@color/my_white"
+                android:textColorHint="@color/my_white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.yyyu.barbecue.ezbooking_base.ui.widget.StickyScrollLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleGroupView
+            android:id="@+id/id_sticky_scroll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:orientation="horizontal">
+
+            <com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleImageView
+                style="@style/seller_type_civ"
+                android:src="@mipmap/icon_cater"/>
+            <com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleImageView
+                style="@style/seller_type_civ"
+                android:src="@mipmap/icon_snack"/>
+            <com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleImageView
+                style="@style/seller_type_civ"
+                android:src="@mipmap/icon_leisure"/>
+            <com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleImageView
+                style="@style/seller_type_civ"
+                android:src="@mipmap/icon_service"/>
+
+        </com.yyyu.barbecue.ezbooking_base.ui.widget.ColorAbleGroupView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <TextView
+               style="@style/seller_type_tv"
+                android:text="餐厅"/>
+            <TextView
+                style="@style/seller_type_tv"
+                android:text="小吃"/>
+            <TextView
+                style="@style/seller_type_tv"
+                android:text="休闲"/>
+            <TextView
+                style="@style/seller_type_tv"
+                android:text="服务"/>
+        </LinearLayout>
+
+
+    <!--tab-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/id_sticky_scroll_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorAccent" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_sticky_scroll_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    </com.yyyu.barbecue.ezbooking_base.ui.widget.StickyScrollLayout>
+
+</LinearLayout>

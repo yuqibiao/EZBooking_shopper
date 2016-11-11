@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--主页底部菜单栏-->
+    <dimen name="main_btm_height">48dp</dimen>
+    <dimen name="main_btm_padding">5dp</dimen>
+    <dimen name="main_btm_ts">12sp</dimen>
+</resources>

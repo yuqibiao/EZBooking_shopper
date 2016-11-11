@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/main_color"
+        android:fitsSystemWindows="true"
+        android:layout_above="@+id/menu_bottom"
+        android:orientation="vertical">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu_bottom"
+        layout="@layout/pt_main_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_btm_height"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

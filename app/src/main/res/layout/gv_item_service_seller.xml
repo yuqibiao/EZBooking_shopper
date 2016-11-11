@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="75dp"
+    android:background="@color/my_white"
+    android:layout_marginRight="10dp"
+    android:minWidth="90dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_seller_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_seller_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="75dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cb_seller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="false"
+            android:button="@null"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_seller_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+</LinearLayout>
